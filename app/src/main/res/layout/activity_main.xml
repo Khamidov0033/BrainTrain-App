@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/introLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="287dp"
+        android:layout_height="98dp"
+        android:onClick="gamingLayoutAppears"
+        android:text="Start"
+        android:textSize="30sp"
+        android:visibility="visible"
+        app:backgroundTint="#38A5F8"
+        app:layout_constraintBottom_toBottomOf="@+id/gamingLayout"
+        app:layout_constraintEnd_toEndOf="@+id/gamingLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gamingLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gamingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/correctAnswerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="28dp"
+            android:background="#FFFFFF"
+            android:padding="7dp"
+            android:text="0/0"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="115dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="48dp"
+            android:onClick="checkAnswer"
+            android:tag="3"
+            android:text="26"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="115dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="48dp"
+            android:onClick="checkAnswer"
+            android:tag="1"
+            android:text="18"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/button0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button0" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="115dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="36dp"
+
+            android:onClick="checkAnswer"
+            android:tag="2"
+            android:text="65"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button0" />
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="74dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:padding="7dp"
+            android:text="30s"
+            android:textAlignment="center"
+            android:textColor="#CFC5C5"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sumTextView"
+            android:layout_width="218dp"
+            android:layout_height="91dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="172dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="14+17"
+            android:textAlignment="center"
+            android:textSize="54sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/playAgain"
+            android:layout_width="255dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="68dp"
+            android:onClick="playAgain"
+            android:text="Play Again"
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.886"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sumTextView" />
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="115dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="36dp"
+            android:onClick="checkAnswer"
+            android:tag="0"
+            android:text="24"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/exitButton" />
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/exitButton"
+            android:layout_width="223dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="92dp"
+            android:onClick="exit"
+            android:text="Exit"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:backgroundTint="#F47D7D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playAgain"
+            app:layout_constraintVertical_bias="0.629" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
