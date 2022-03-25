@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         nextQuestion();
 
 
-        countDownTimer= new   CountDownTimer(30200,1000){
+        countDownTimer= new   CountDownTimer(10200,1000){
 
             @Override
             public void onTick(long millisUntilFinished) {
